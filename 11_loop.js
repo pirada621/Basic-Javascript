@@ -25,5 +25,7 @@ while (i < 5) {
 
     var a = 0;
 
-    while (a < 10) {
-
+    while (a <= 5) {
+        console.log('*'.repeat(a));
+        a++;
+    }
