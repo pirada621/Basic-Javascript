@@ -66,3 +66,60 @@ const mutate_arr = ['red','green','0','1','blue']
 const spilced = mutate_arr.splice(2,2,'white','pink')
 
 console.log(mutate_arr);
+
+
+//Silce
+const mutate_arr1 = ['red','green','0','1','blue']
+//const sliced = mutate_arr1.slice(1)
+//const sliced = mutate_arr1.slice(1,2) //ดึงตั้งแต่ตำแหน่งที่1 ถึง2 แต่ไม่รวม2
+//ถ้าส่งค่า Slice เข้าไปเฉยๆ ไม่ระบุตำแหน่ง จะเป็นการ copy arry
+const sliced = mutate_arr1.slice()
+console.log(sliced);
+
+//Avoid array Mutation
+const fruits = ['banana','apple','mangu']
+//หากอยากเพิ่ม strawberry เข้าไปหน้า apple โดยไม่เปลี่ยนแปลงค่าใน fruits เดิมจะทำอย่างไร
+
+// const newFruit = [
+//     ...fruits.slice(0,1),
+//     'strawberry',
+//     ...fruits.slice(1)
+// ]
+
+// console.log(newFruit);
+// console.log(fruits);
+
+//อยากลบ apple ออกจาก array ตัวใหม่
+const newFruit = [
+    ...fruits.slice(0,1),
+    ...fruits.slice(2)
+]
+
+console.log(newFruit);
+
+console.log('--------------');
+
+//การวนลูป Array
+const num_arr = ['one','two','three']
+num_arr.forEach(result=>{
+    console.log(result);
+})
+
+console.log('--------------');
+
+//For of
+for(const v of num_arr){
+    if(v == 'two'){
+        //break
+        continue
+    }
+    console.log(v);
+}
+
+console.log('--------------');
+
+//การค้นหาตำแหน่งสมาชิกของ array
+const num_arrays = [1,4,8,10,8,11,12]
+//const index = num_arrays.indexOf(10)
+const index = num_arrays.indexOf(8)
+console.log(index);
