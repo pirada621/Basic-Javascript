@@ -123,3 +123,7 @@ const num_arrays = [1,4,8,10,8,11,12]
 //const index = num_arrays.indexOf(10)
 const index = num_arrays.indexOf(8)
 console.log(index);
+
+//findindex
+const found = num_arrays.findIndex(e=>e%4==0)
+console.log(found);
