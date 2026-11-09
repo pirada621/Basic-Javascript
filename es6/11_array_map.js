@@ -28,6 +28,33 @@ console.log("--------------------");
 
 //ลองมาใช้ Array Map
 //const result_map = array.map(result => result*2)
-console.log(array.map(result => result*2));
+//อาจจะแยกฟังก์ชัน
+const multiplyBytwo = result => result*2
+const multiplyByten = result => result*10
+console.log(array.map(multiplyBytwo).map(multiplyByten));
 //console.log(result_map);
 console.log(array);
+
+//ตัวอย่างการใช้ array Map
+const pent = [
+    {name:'Bebo'},
+    {name:'Bebo'}
+]
+
+console.log("--------------------");
+
+const result_data = pent.map(e => e.name)
+console.log(result_data)
+
+//ตัวอย่างเพิ่มเติม
+const fruits = ['banana', 'apple', 'mengo']
+// [
+//     'Day 1, eat banana',
+//     'Day 2, eat apple',
+//     'Day 3, eat mengo',
+// ]
+
+const result_fruit = fruits.map((e,i,d)=>{
+    return `Day ${i+1} eat ${e} ของเดิม${d}`
+})
+console.log(result_fruit)
