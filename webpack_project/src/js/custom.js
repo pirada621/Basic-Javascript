@@ -1,2 +1,2 @@
-export let firstname = "Pirada"
-export let lastname = "Chaoichan"
+export let firstname = "สมคิด"
+export let lastname = "ใจดี"
